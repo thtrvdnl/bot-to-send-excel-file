@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  bot:
+    image: filebot
+    container_name: filebot-bot
+    build:
+      context: .
+      dockerfile: dockerfiles/bot.dockerfile
+    restart: always
+    tty: true
+    env_file:
+      - ./configs/bot.env
+    volumes:
+      - ./logs:/microservices/logs
+    command: python run.py
