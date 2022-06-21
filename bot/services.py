@@ -2,8 +2,7 @@ from io import BytesIO
 from typing import Awaitable
 
 from aiogram.types import Message
-
-from settings import get_logger, bot
+from settings import bot, get_logger
 
 log = get_logger(__name__)
 
